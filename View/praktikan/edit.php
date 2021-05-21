@@ -43,7 +43,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">Jenis Kelamin</label>
-                        <input type="text" name="no_hp" class="form-control" value="087632">
+                        <input type="text" name="no_hp" class="form-control" value="Pria">
                     </div>
                     <button type="submit" class="btn btn-success btn-lg btn-block">Simpan</button>
                 </form>
