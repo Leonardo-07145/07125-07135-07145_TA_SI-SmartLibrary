@@ -11,24 +11,30 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Sistem Informasi Praktikum | </a>
+        <a class="navbar-brand" href="#">Sistem Informasi Smart Library | </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.php?page=praktikan&aksi=view">Profil</a>
+                    <a class="nav-link" href="index.php?page=aslab&aksi=view">Data Member</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.php?page=praktikan&aksi=praktikum">Praktikum</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Management Praktikum
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="index.php?page=praktikum&aksi=view">Management Data Praktikum</a>
+                        <a class="dropdown-item" href="index.php?page=modul&aksi=view">Management Data Modul</a>
+                        <a class="dropdown-item" href="index.php?page=daftarprak&aksi=view">Management Pendaftaran Praktikum</a>
+                    </div>
                 </li>
-
             </ul>
         </div>
         <div class="form-inline">
             <!-- Diganti Saat Modul 2 -->
-            <label class="form-control mr-sm-2">Praktikan : {SESSION LOGIN PRAKTIKAn} </label>
+            <label class="form-control mr-sm-2">Admin : {SESSION LOGIN ASLAB} </label>
             <a class=" btn btn-danger" href="index.php?page=auth&aksi=logout">Logout</a>
         </div>
     </nav>
