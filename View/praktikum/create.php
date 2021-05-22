@@ -20,14 +20,18 @@
                 </div>
                 <div class="card-body">
                     <form action="index.php?page=praktikum&aksi=store" method="POST">
+                    <div class="form-group">
+                                <label for="">Judul :</label>
+                                <input type="text" name="judul" class="form-control" required>
+                            </div>
                         <div class="row">
                             <div class="col">
-                                <label for="">Nama :</label>
-                                <input type="text" name="nama" class="form-control" required>
+                                <label for="">Nama Pengarang :</label>
+                                <input type="text" name="judulpengarang" class="form-control" required>
                             </div>
                             <div class="col">
-                                <label for="">Tahun : </label>
-                                <input type="date" name="tahun" class="form-control" required>
+                                <label for="">Jenis Koleksi : </label>
+                                <input type="text" name="jeniskoleksi" class="form-control" required>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary float-right mt-3">Simpan</button>
