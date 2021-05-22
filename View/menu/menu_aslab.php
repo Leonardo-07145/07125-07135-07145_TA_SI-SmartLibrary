@@ -22,12 +22,12 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Management Praktikum
+                        Management Perpustakaan
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="index.php?page=praktikum&aksi=view">Management Data Praktikum</a>
+                        <a class="dropdown-item" href="index.php?page=praktikum&aksi=view">Management Data Buku</a>
                         <a class="dropdown-item" href="index.php?page=modul&aksi=view">Management Data Modul</a>
-                        <a class="dropdown-item" href="index.php?page=daftarprak&aksi=view">Management Pendaftaran Praktikum</a>
+                        <a class="dropdown-item" href="index.php?page=daftarprak&aksi=view">Management Peminjaman Buku</a>
                     </div>
                 </li>
             </ul>
