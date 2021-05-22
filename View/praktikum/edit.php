@@ -22,24 +22,22 @@
                     <form action="index.php?page=praktikum&aksi=update" method="POST">
                         <!-- Digant saat modul 3 -->
                         <input type="hidden" name="id" value="1">
-                        <div class="row">
-                        <div class=" col">
-                                <label for="">Judul : </label>
-                                <input type="text" name="tahun" class="form-control" value="gopur">
+                            <div class="form-group">
+                                <label for="">Judul :</label>
+                                <input type="text" name="judul" class="form-control" value="gopur">
                             </div>
+                        <div class="row">
                             <div class="col">
                                 <label for="">Nama Pengarang :</label>
-                                <input type="text" name="nama" class="form-control" value="LJ">
+                                <input type="text" name="namapengarang" class="form-control" value="LJ">
                             </div>
                             <div class=" col">
-                                <label for="">Jenis Koleksi : </label>
-                                <input type="text" name="tahun" class="form-control" value="fixi">
+                                <label for="">Jenis Koleksi :</label>
+                                <input type="text" name="jeniskoleksi" class="form-control" value="fixi">
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary float-right mt-3">Simpan</button>
                     </form>
-
-
                 </div>
             </div>
         </div>

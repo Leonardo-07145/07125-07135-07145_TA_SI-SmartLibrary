@@ -33,7 +33,7 @@
                                 <td>1</td>
                                 <td>John Doe</td>
                                 <td>
-                                    <a href="index.php?page=praktikan&aksi=nilaiPraktikan&idPraktikum=#" class="btn btn-info">Cek Nilai</a>
+                                    <a href="index.php?page=praktikan&aksi=nilaiPraktikan&idPraktikum=#" class="btn btn-info">Cek</a>
                                 </td>
                             </tr>
                         </tbody>

@@ -43,7 +43,12 @@
                     </div>
                     <div class="form-group">
                         <label for="">Jenis Kelamin</label>
-                        <input type="text" name="no_hp" class="form-control" value="Pria">
+                            <select name="jenis_kelamin" class="form-control" required>
+                                    <?php for ($i = 1; $i <= 1; $i++) : ?>
+                                        <option value="<?= $i; ?>">Pria</option>
+                                        <option value="<?= $i; ?>">Wanita</option>
+                                    <?php endfor; ?>
+                            </select>
                     </div>
                     <button type="submit" class="btn btn-success btn-lg btn-block">Simpan</button>
                 </form>
