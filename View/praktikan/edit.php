@@ -27,7 +27,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">Tanggal Lahir</label>
-                        <input type="text" name="npm" class="form-control" value="06.2099.12.92929">
+                        <input type="date" name="npm" class="form-control" value="06.2099.12.92929">
                     </div>
                     <div class="form-group">
                         <label for="">Password</label>
@@ -41,15 +41,6 @@
                         <label for="">Alamat</label>
                         <input type="text" name="no_hp" class="form-control" value="087632">
                     </div>
-                    <!-- <div class="form-group">
-                        <label for="">Jenis Kelamin</label>
-                            <select name="jenis_kelamin" class="form-control" required>
-                                    <?php for ($i = 1; $i <= 1; $i++) : ?>
-                                        <option value="<?= $i; ?>">Pria</option>
-                                        <option value="<?= $i; ?>">Wanita</option>
-                                    <?php endfor; ?>
-                            </select>
-                    </div> -->
                     <button type="submit" class="btn btn-success btn-lg btn-block">Simpan</button>
                 </form>
             </div>

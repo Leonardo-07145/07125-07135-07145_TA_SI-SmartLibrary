@@ -32,9 +32,7 @@
                             <tr>
                                 <td>1</td>
                                 <td>John Doe</td>
-                                <td>
-                                    <a href="index.php?page=praktikan&aksi=nilaiPraktikan&idPraktikum=#" class="btn btn-info">Cek</a>
-                                </td>
+                                <td><span class="badge badge-danger">Belum Diverif</span><span class="badge badge-success">Sudah Diverif</span></td>
                             </tr>
                         </tbody>
                     </table>

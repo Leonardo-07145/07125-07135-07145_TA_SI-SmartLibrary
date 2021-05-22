@@ -27,7 +27,7 @@
                         <div class="row">
                             <div class="col">
                                 <label for="">Nama Pengarang :</label>
-                                <input type="text" name="judulpengarang" class="form-control" required>
+                                <input type="text" name="namapengarang" class="form-control" required>
                             </div>
                             <div class="col">
                                 <label for="">Jenis Koleksi : </label>

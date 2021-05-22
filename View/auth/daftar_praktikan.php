@@ -31,15 +31,6 @@
                         <label>Tanggal Lahir : </label>
                         <input type="date" class="form-control" name="tgl_lahir">
                     </div>
-                    <!-- <div class="form-group">
-                        <label>Jenis Kelamin : </label>
-                            <select name="jenis_kelamin" class="form-control" required>
-                                    <?php for ($i = 1; $i <= 1; $i++) : ?>
-                                        <option value="<?= $i; ?>">Pria</option>
-                                        <option value="<?= $i; ?>">Wanita</option>
-                                    <?php endfor; ?>
-                            </select>
-                    </div> -->
                     <div class="form-group">
                         <label>Alamat : </label>
                         <input type="text" class="form-control" name="alamat">
