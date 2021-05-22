@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar Praktikum</title>
+    <title>Daftar Member</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 </head>
 
@@ -14,7 +14,9 @@
 
         <div class="card mt-5">
             <div class=" card-header">
-                <h2>Daftar Praktikum</h2>
+                <center>
+                <h2>Perpustakaan</h2>
+                </center>
                 <a href="index.php?page=praktikan&aksi=view" class="btn btn-info float-right">Kembali</a>
             </div>
             <div class="card-body">
@@ -22,13 +24,13 @@
                     <div class="row">
                         <div class="col">
                             <!-- Digant saat modul 3 -->
-                            <label for="">Praktikum : </label>
+                            <label for="">Daftar Buku : </label>
                             <select name="praktikum" class="form-control">
-                                <option value="1">Basis Data</option>
+                                <option value="1">Kisah Tanah Jawa</option>
                             </select>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary float-right mt-3">Daftar</button>
+                    <button type="submit" class="btn btn-primary float-right mt-3">Pinjam</button>
                 </form>
 
 
