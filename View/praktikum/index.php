@@ -38,7 +38,7 @@
                                 <td>Buku Cerita</td>
                                 <td>
                                     <a href="index.php?page=praktikum&aksi=edit&id=#" class="btn btn-warning">Edit</a>
-                                    <a href="index.php?page=modul&aksi=delete&id=#" class="btn btn-danger">Hapus</a>
+                                    <a href="index.php?page=praktikum&aksi=edit&id=#" class="btn btn-danger">Hapus</a>
                                 </td>
                             </tr>
                         </tbody>
