@@ -28,6 +28,16 @@
                             <select name="praktikum" class="form-control">
                                 <option value="1">Kisah Tanah Jawa</option>
                             </select>
+                            <div class="row">
+                            <div class="col">
+                                <label for="">Tanggal Pinjam :</label>
+                                <input type="date" name="tglpinjam" class="form-control" required>
+                            </div>
+                            <div class="col">
+                                <label for="">Tanggal Kembali : </label>
+                                <input type="date" name="tglkembali" class="form-control" required>
+                            </div>
+                        </div>
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary float-right mt-3">Pinjam</button>

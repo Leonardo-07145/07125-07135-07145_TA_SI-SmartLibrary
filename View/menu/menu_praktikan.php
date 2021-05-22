@@ -18,17 +18,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.php?page=praktikan&aksi=view">Profil</a>
+                    <a class="nav-link" href="index.php?page=praktikan&aksi=view">Profil Member</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.php?page=praktikan&aksi=praktikum">Praktikum</a>
+                    <a class="nav-link" href="index.php?page=praktikan&aksi=praktikum">Peminjaman</a>
                 </li>
-
             </ul>
         </div>
         <div class="form-inline">
             <!-- Diganti Saat Modul 2 -->
-            <label class="form-control mr-sm-2">Praktikan : {SESSION LOGIN PRAKTIKAn} </label>
+            <label class="form-control mr-sm-2">Praktikan : {SESSION LOGIN MEMBER} </label>
             <a class=" btn btn-danger" href="index.php?page=auth&aksi=logout">Logout</a>
         </div>
     </nav>

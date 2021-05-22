@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Praktikum</title>
+    <title>Create Koleksi</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 </head>
 
@@ -15,7 +15,7 @@
 
             <div class="card mt-5">
                 <div class=" card-header">
-                    <h2>Create Praktikum</h2>
+                    <h2>Create Koleksi</h2>
                     <a href="index.php?page=praktikum&aksi=view" class="btn btn-info float-right">Kembali</a>
                 </div>
                 <div class="card-body">

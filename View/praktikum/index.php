@@ -15,7 +15,7 @@
             <div class="card mt-5">
                 <div class=" card-header">
                     <h2>Data Koleksi</h2>
-                    <a href="index.php?page=praktikum&aksi=create" class="btn btn-success float-right">Tambah Praktikum</a>
+                    <a href="index.php?page=praktikum&aksi=create" class="btn btn-success float-right">Tambah Koleksi</a>
                 </div>
                 <div class="card-body">
 
@@ -38,7 +38,7 @@
                                 <td>Buku Cerita</td>
                                 <td>
                                     <a href="index.php?page=praktikum&aksi=edit&id=#" class="btn btn-warning">Edit</a>
-                                    <a href="index.php?page=praktikum&aksi=edit&id=#" class="btn btn-danger">Hapus</a>
+                                    <a href="index.php?page=praktikum&aksi=view&id=#" class="btn btn-danger">Hapus</a>
                                 </td>
                             </tr>
                         </tbody>

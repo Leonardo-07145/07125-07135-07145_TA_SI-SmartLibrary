@@ -26,7 +26,6 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="index.php?page=praktikum&aksi=view">Management Data Buku</a>
-                        <a class="dropdown-item" href="index.php?page=modul&aksi=view">Management Data Modul</a>
                         <a class="dropdown-item" href="index.php?page=daftarprak&aksi=view">Management Peminjaman Buku</a>
                     </div>
                 </li>
@@ -34,7 +33,7 @@
         </div>
         <div class="form-inline">
             <!-- Diganti Saat Modul 2 -->
-            <label class="form-control mr-sm-2">Admin : {SESSION LOGIN ASLAB} </label>
+            <label class="form-control mr-sm-2">Admin : {SESSION LOGIN ADMIN} </label>
             <a class=" btn btn-danger" href="index.php?page=auth&aksi=logout">Logout</a>
         </div>
     </nav>
