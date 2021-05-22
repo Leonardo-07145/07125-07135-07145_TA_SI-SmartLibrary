@@ -23,13 +23,17 @@
                         <!-- Digant saat modul 3 -->
                         <input type="hidden" name="id" value="1">
                         <div class="row">
+                        <div class=" col">
+                                <label for="">Judul : </label>
+                                <input type="text" name="tahun" class="form-control" value="gopur">
+                            </div>
                             <div class="col">
-                                <label for="">Nama :</label>
-                                <input type="text" name="nama" class="form-control" value="John Doe">
+                                <label for="">Nama Pengarang :</label>
+                                <input type="text" name="nama" class="form-control" value="LJ">
                             </div>
                             <div class=" col">
-                                <label for="">Tahun : </label>
-                                <input type="date" name="tahun" class="form-control" value="2021">
+                                <label for="">Jenis Koleksi : </label>
+                                <input type="text" name="tahun" class="form-control" value="fixi">
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary float-right mt-3">Simpan</button>
