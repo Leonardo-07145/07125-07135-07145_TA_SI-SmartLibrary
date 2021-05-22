@@ -13,7 +13,6 @@ if (isset($_GET['page']) && isset($_GET['aksi'])) {
         } else if ($aksi == 'loginPraktikan') {
             require_once("View/auth/login_praktikan.php");
         } else if ($aksi == 'authAslab') {
-
             require_once("View/menu/menu_aslab.php");
             require_once("View/aslab/index.php");
         } else if ($aksi == 'authPraktikan') {

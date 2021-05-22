@@ -39,11 +39,11 @@
                             <label class="form-control mr-sm-2 col-form-label"><span class="badge badge-primary">Alamat</span> : 00000123 </label>
                         </div>
                     </div>
-                    <div class="row ml-4 mt-2">
+                    <!-- <div class="row ml-4 mt-2">
                         <div class="form-inline">
                             <label class="form-control mr-sm-2 col-form-label"><span class="badge badge-primary">Jenis Kelamin</span> : 00000123 </label>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
