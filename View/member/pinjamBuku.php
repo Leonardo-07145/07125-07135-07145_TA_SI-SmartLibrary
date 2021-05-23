@@ -17,10 +17,10 @@
                 <center>
                 <h2>Perpustakaan</h2>
                 </center>
-                <a href="index.php?page=praktikan&aksi=view" class="btn btn-info float-right">Kembali</a>
+                <a href="index.php?page=member&aksi=view" class="btn btn-info float-right">Kembali</a>
             </div>
             <div class="card-body">
-                <form action="index.php?page=praktikan&aksi=storePraktikum" method="POST">
+                <form action="index.php?page=member&aksi=storePeminjaman" method="POST">
                     <div class="row">
                         <div class="col">
                             <!-- Digant saat modul 3 -->

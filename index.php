@@ -8,54 +8,54 @@ if (isset($_GET['page']) && isset($_GET['aksi'])) {
     if ($page == "auth") {
         if ($aksi == 'view') {
             require_once("View/auth/index.php");
-        } else if ($aksi == 'loginAslab') {
-            require_once("View/auth/login_aslab.php");
-        } else if ($aksi == 'loginPraktikan') {
-            require_once("View/auth/login_praktikan.php");
-        } else if ($aksi == 'authAslab') {
-            require_once("View/menu/menu_aslab.php");
-            require_once("View/aslab/index.php");
-        } else if ($aksi == 'authPraktikan') {
-            require_once("View/menu/menu_praktikan.php");
-            require_once("View/praktikan/index.php");
+        } else if ($aksi == 'loginAdmin') {
+            require_once("View/auth/login_admin.php");
+        } else if ($aksi == 'loginMember') {
+            require_once("View/auth/login_member.php");
+        } else if ($aksi == 'authAdmin') {
+            require_once("View/menu/menu_admin.php");
+            require_once("View/admin/index.php");
+        } else if ($aksi == 'authMember') {
+            require_once("View/menu/menu_member.php");
+            require_once("View/member/index.php");
         } else if ($aksi == 'logout') {
             require_once("View/auth/index.php");
-        } else if ($aksi == 'daftarPraktikan') {
-            require_once("View/auth/daftar_praktikan.php");
-        } else if ($aksi == 'storePraktikan') {
+        } else if ($aksi == 'daftarMember') {
+            require_once("View/auth/daftar_member.php");
+        } else if ($aksi == 'storeMember') {
             require_once("View/auth/index.php");
         } else {
             echo "Method Not Found";
         }
-    } else if ($page == "aslab") {
-        require_once("View/menu/menu_aslab.php");
+    } else if ($page == "admin") {
+        require_once("View/menu/menu_admin.php");
         if ($aksi == 'view') {
-            require_once("View/aslab/index.php");
+            require_once("View/admin/index.php");
         } else if ($aksi == 'nilai') {
-            require_once("View/aslab/nilai.php");
+            require_once("View/admin/nilai.php");
         } else if ($aksi == 'createNilai') {
-            require_once("View/aslab/createNilai.php");
+            require_once("View/admin/createNilai.php");
         } else if ($aksi == 'storeNilai') {
-            require_once("View/aslab/nilai.php");
+            require_once("View/admin/nilai.php");
         } else {
             echo "Method Not Found";
         }
-    } else if ($page == "praktikum") {
-        require_once("View/menu/menu_aslab.php");
+    } else if ($page == "koleksi") {
+        require_once("View/menu/menu_admin.php");
         if ($aksi == 'view') {
-            require_once("View/praktikum/index.php");
+            require_once("View/koleksi/index.php");
         } else if ($aksi == 'create') {
-            require_once("View/praktikum/create.php");
+            require_once("View/koleksi/create.php");
         } else if ($aksi == 'store') {
-            require_once("View/praktikum/index.php");
+            require_once("View/koleksi/index.php");
         } else if ($aksi == 'edit') {
-            require_once("View/praktikum/edit.php");;
+            require_once("View/koleksi/edit.php");;
         } else if ($aksi == 'update') {
-            require_once("View/praktikum/index.php");
+            require_once("View/koleksi/index.php");
         } else if ($aksi == 'aktifkan') {
-            require_once("View/praktikum/index.php");
+            require_once("View/koleksi/index.php");
         } else if ($aksi == 'nonAktifkan') {
-            require_once("View/praktikum/index.php");
+            require_once("View/koleksi/index.php");
         } else {
             echo "Method Not Found";
         }
@@ -72,22 +72,22 @@ if (isset($_GET['page']) && isset($_GET['aksi'])) {
         } else {
             echo "Method Not Found";
         }
-    } else if ($page == "praktikan") {
-        require_once("View/menu/menu_praktikan.php");
+    } else if ($page == "member") {
+        require_once("View/menu/menu_member.php");
         if ($aksi == 'view') {
-            require_once("View/praktikan/index.php");
+            require_once("View/member/index.php");
         } else if ($aksi == 'edit') {
-            require_once("View/praktikan/edit.php");
+            require_once("View/member/edit.php");
         } else if ($aksi == 'update') {
-            require_once("View/praktikan/index.php");
-        } else if ($aksi == 'praktikum') {
-            require_once("View/praktikan/praktikum.php");
-        } else if ($aksi == 'daftarPraktikum') {
-            require_once("View/praktikan/daftarPraktikum.php");
-        } else if ($aksi == 'storePraktikum') {
-            require_once("View/praktikan/index.php");
+            require_once("View/member/index.php");
+        } else if ($aksi == 'peminjaman') {
+            require_once("View/member/peminjaman.php");
+        } else if ($aksi == 'pinjamBuku') {
+            require_once("View/member/pinjamBuku.php");
+        } else if ($aksi == 'storePeminjaman') {
+            require_once("View/member/peminjaman.php");
         } else if ($aksi == 'nilaiPraktikan') {
-            require_once("View/praktikan/nilaiPraktikan.php");
+            require_once("View/member/nilaiPraktikan.php");
         } else {
             echo "Method Not Found";
         }

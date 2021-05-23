@@ -15,10 +15,10 @@
         <div class="card mt-5">
             <div class="card-header text-center">
                 <h2>Edit Profil Member</h2>
-                <a href="index.php?page=praktikan&aksi=view" class="btn btn-info float-right">Kembali</a>
+                <a href="index.php?page=member&aksi=view" class="btn btn-info float-right">Kembali</a>
             </div>
             <div class="card-body">
-                <form action="index.php?page=praktikan&aksi=update" method="POST">
+                <form action="index.php?page=member&aksi=update" method="POST">
                     <!-- Diganti saat modul 3 -->
                     <input type="hidden" name="id" value="#">
                     <div class="form-group">

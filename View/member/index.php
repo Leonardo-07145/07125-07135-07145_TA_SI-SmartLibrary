@@ -16,7 +16,7 @@
             <div class="card mt-5" style="width : 50%;">
                 <div class=" card-header">
                     <h2>Profil</h2>
-                    <a href="index.php?page=praktikan&aksi=edit" class="btn btn-warning float-right">Edit Profil</a>
+                    <a href="index.php?page=member&aksi=edit" class="btn btn-warning float-right">Edit Profil</a>
                 </div>
                 <div class="card-body">
                     <div class="row ml-4">
@@ -39,11 +39,6 @@
                             <label class="form-control mr-sm-2 col-form-label"><span class="badge badge-primary">Alamat</span> : 00000123 </label>
                         </div>
                     </div>
-                    <!-- <div class="row ml-4 mt-2">
-                        <div class="form-inline">
-                            <label class="form-control mr-sm-2 col-form-label"><span class="badge badge-primary">Jenis Kelamin</span> : 00000123 </label>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>

@@ -16,7 +16,7 @@
             <div class="card mt-5">
                 <div class=" card-header">
                     <h2>Peminjaman</h2>
-                    <a href="index.php?page=praktikan&aksi=daftarPraktikum" class="btn btn-primary float-right">Pinjam Buku</a>
+                    <a href="index.php?page=member&aksi=pinjamBuku" class="btn btn-primary float-right">Pinjam Buku</a>
                 </div>
                 <div class="card-body">
                     <table class="table table-striped table-bordered">

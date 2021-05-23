@@ -14,11 +14,14 @@
             <div class="card mt-5">
                 <div class="card-header">
                     <h2>Selamat Datang Di Sistem Informasi Smart Library</h2>
+                    <p>
+                        <img src="gambarbuku.jpg" />
+                    </p>
                 </div>
                 <div class="card-body">
-                    <a href="index.php?page=auth&aksi=loginAslab" class="btn btn-primary">Login Admin</a>
-                    <a href="index.php?page=auth&aksi=loginPraktikan" class="btn btn-dark">Login Member</a>
-                    <a href="index.php?page=auth&aksi=daftarPraktikan" class="btn btn-success">Daftar Member</a>
+                    <a href="index.php?page=auth&aksi=loginAdmin" class="btn btn-dark">Login Admin</a>
+                    <a href="index.php?page=auth&aksi=loginMember" class="btn btn-dark">Login Member</a>
+                    <a href="index.php?page=auth&aksi=daftarMember" class="btn btn-dark">Daftar Member</a>
                 </div>
             </div>
         </div>
