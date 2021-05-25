@@ -1,12 +1,22 @@
 <?php
 require_once("koneksi.php");
+
+/**Memanggil Model */
+require_once("Model/AuthModel.php");
+
+/**Memanggil Model */
+require_once("Controller/AuthController.php");
+
 //Routing dari URL ke Obyek Class PHP
-if (isset($_GET['page']) && isset($_GET['aksi'])) {
+if (isset($_GET['page']) && isset($_GET['aksi']))
+{
+    session_start();
     $page = $_GET['page']; // Berisi nama page
     $aksi = $_GET['aksi']; // Aksi Dari setiap page
 
     // require_once akan Dirubah Saat Modul 2
     if ($page == "auth") {
+        $auth = new AuthController(); 
         if ($aksi == 'view') {
             require_once("View/auth/index.php");
         } else if ($aksi == 'loginAdmin') {
@@ -22,9 +32,9 @@ if (isset($_GET['page']) && isset($_GET['aksi'])) {
         } else if ($aksi == 'logout') {
             require_once("View/auth/index.php");
         } else if ($aksi == 'daftarMember') {
-            require_once("View/auth/daftar_member.php");
+            $auth->daftarMember();
         } else if ($aksi == 'storeMember') {
-            require_once("View/auth/index.php");
+            $auth->storeMember();
         } else {
             echo "Method Not Found";
         }

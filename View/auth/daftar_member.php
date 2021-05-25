@@ -29,7 +29,7 @@
                     </div>
                     <div class="form-group">
                         <label>Tanggal Lahir : </label>
-                        <input type="date" class="form-control" name="tgl_lahir">
+                        <input type="date" class="form-control" name="tgllahir">
                     </div>
                     <div class="form-group">
                         <label>Alamat : </label>
@@ -37,7 +37,7 @@
                     </div>
                     <div class="form-group">
                         <label>No Telepon : </label>
-                        <input type="text" class="form-control" name="no_hp">
+                        <input type="text" class="form-control" name="notelp">
                     </div>
                     <button type="submit" class="btn btn-success btn-lg btn-block">Daftar</button>
                     <a href="index.php?page=auth&aksi=view" class="btn btn-danger btn-lg btn-block">Kembali</a>
