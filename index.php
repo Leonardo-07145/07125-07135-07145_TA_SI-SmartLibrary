@@ -20,17 +20,15 @@ if (isset($_GET['page']) && isset($_GET['aksi']))
         if ($aksi == 'view') {
             require_once("View/auth/index.php");
         } else if ($aksi == 'loginAdmin') {
-            require_once("View/auth/login_admin.php");
+            $auth->login_admin();
         } else if ($aksi == 'loginMember') {
-            require_once("View/auth/login_member.php");
+            $auth->login_member();
         } else if ($aksi == 'authAdmin') {
-            require_once("View/menu/menu_admin.php");
-            require_once("View/admin/index.php");
+            $auth->authAdmin();
         } else if ($aksi == 'authMember') {
-            require_once("View/menu/menu_member.php");
-            require_once("View/member/index.php");
+            $auth->authMember();
         } else if ($aksi == 'logout') {
-            require_once("View/auth/index.php");
+            $auth->logout();
         } else if ($aksi == 'daftarMember') {
             $auth->daftarMember();
         } else if ($aksi == 'storeMember') {
