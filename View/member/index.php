@@ -21,22 +21,22 @@
                 <div class="card-body">
                     <div class="row ml-4">
                         <div class="form-inline">
-                            <label class="form-control mr-sm-2 col-form-label"><span class="badge badge-primary">Nama</span> : John Doe </label>
+                            <label class="form-control mr-sm-2 col-form-label"><span class="badge badge-primary">Nama</span> : Pek </label>
                         </div>
                     </div>
                     <div class="row ml-4 mt-2">
                         <div class="form-inline">
-                            <label class="form-control mr-sm-2 col-form-label"><span class="badge badge-primary">Tanggal Lahir</span> : 06.2088.12.9878 </label>
+                            <label class="form-control mr-sm-2 col-form-label"><span class="badge badge-primary">Tanggal Lahir</span> : 2021-05-21 </label>
                         </div>
                     </div>
                     <div class="row ml-4 mt-2">
                         <div class="form-inline">
-                            <label class="form-control mr-sm-2 col-form-label"><span class="badge badge-primary">No.Telp</span> : 00000123 </label>
+                            <label class="form-control mr-sm-2 col-form-label"><span class="badge badge-primary">No.Telp</span> : 0857878382131 </label>
                         </div>
                     </div>
                     <div class="row ml-4 mt-2">
                         <div class="form-inline">
-                            <label class="form-control mr-sm-2 col-form-label"><span class="badge badge-primary">Alamat</span> : 00000123 </label>
+                            <label class="form-control mr-sm-2 col-form-label"><span class="badge badge-primary">Alamat</span> : Surabaya </label>
                         </div>
                     </div>
                 </div>

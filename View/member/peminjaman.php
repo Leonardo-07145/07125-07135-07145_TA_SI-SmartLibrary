@@ -31,7 +31,7 @@
                             <!-- Diganti Saat Modul 2 -->
                             <tr>
                                 <td>1</td>
-                                <td>John Doe</td>
+                                <td>Kisah Tanah Jawa</td>
                                 <td><span class="badge badge-danger">Belum Diverif</span><span class="badge badge-success">Sudah Diverif</span></td>
                             </tr>
                         </tbody>
