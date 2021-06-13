@@ -9,19 +9,21 @@
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Sistem Informasi Smart Library | </a>
+        <a class="navbar-brand" href="#">Sistem Informasi Perpustakaan | </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.php?page=member&aksi=view">Profil Member</a>
+                    <a class="nav-link" href="index.php?page=member&aksi=view">Profil</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.php?page=member&aksi=peminjaman">Peminjaman</a>
+                    <a class="nav-link" href="index.php?page=member&aksi=peminjaman">Peminjaman Buku</a>
                 </li>
+
             </ul>
         </div>
         <div class="form-inline">

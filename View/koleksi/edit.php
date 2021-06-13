@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Praktikum</title>
+    <title>Edit Koleksi</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 </head>
 
@@ -15,25 +15,25 @@
 
             <div class="card mt-5">
                 <div class=" card-header">
-                    <h2>Edit Praktikum</h2>
-                    <a href="index.php?page=praktikum&aksi=view" class="btn btn-info float-right">Kembali</a>
+                    <h2>Edit Koleksi</h2>
+                    <a href="index.php?page=koleksi&aksi=view" class="btn btn-info float-right">Kembali</a>
                 </div>
                 <div class="card-body">
-                    <form action="index.php?page=praktikum&aksi=update" method="POST">
+                    <form action="index.php?page=koleksi&aksi=update" method="POST">
                         <!-- Digant saat modul 3 -->
-                        <input type="hidden" name="id" value="1">
-                            <div class="form-group">
+                        <input type="hidden" name="id" value="<?= $data['id'] ?>">
+                        <div class="form-group">
                                 <label for="">Judul :</label>
-                                <input type="text" name="judul" class="form-control" value="gopur">
+                                <input type="text" name="judul" class="form-control" value="<?= $data['judul'] ?>">
                             </div>
                         <div class="row">
                             <div class="col">
                                 <label for="">Nama Pengarang :</label>
-                                <input type="text" name="namapengarang" class="form-control" value="LJ">
+                                <input type="text" name="pengarang" class="form-control" value="<?= $data['pengarang'] ?>">
                             </div>
                             <div class=" col">
-                                <label for="">Jenis Koleksi :</label>
-                                <input type="text" name="jeniskoleksi" class="form-control" value="fixi">
+                                <label for="">Jenis Koleksi [PERMANEN] :</label>
+                                <input type="text" name="jeniskoleksi" class="form-control" value="<?= $data['jeniskoleksi'] ?>">
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary float-right mt-3">Simpan</button>

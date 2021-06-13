@@ -16,10 +16,10 @@
             <div class="card mt-5">
                 <div class=" card-header">
                     <h2>Create Koleksi</h2>
-                    <a href="index.php?page=praktikum&aksi=view" class="btn btn-info float-right">Kembali</a>
+                    <a href="index.php?page=koleksi&aksi=view" class="btn btn-info float-right">Kembali</a>
                 </div>
                 <div class="card-body">
-                    <form action="index.php?page=praktikum&aksi=store" method="POST">
+                    <form action="index.php?page=koleksi&aksi=store" method="POST">
                     <div class="form-group">
                                 <label for="">Judul :</label>
                                 <input type="text" name="judul" class="form-control" required>
@@ -27,17 +27,37 @@
                         <div class="row">
                             <div class="col">
                                 <label for="">Nama Pengarang :</label>
-                                <input type="text" name="namapengarang" class="form-control" required>
+                                <input type="text" name="pengarang" class="form-control" required>
                             </div>
                             <div class="col">
-                                <label for="">Jenis Koleksi : </label>
-                                <input type="text" name="jeniskoleksi" class="form-control" required>
+                            <div class="col">
+                                <label for="">Jenis Koleksi (masukkan nomor nya) :</label>
+                                <input type="text" name="jenis_id" class="form-control" required>
+                            </div>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary float-right mt-3">Simpan</button>
+                        <br></br>
+                        <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Jenis Koleksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Diganti Saat Modul 2 -->
+                            <?php $no = 1;
+                            foreach ($data as $row) : ?>
+                            <tr>
+                                <td><?= $no; ?></td>
+                                <td><?= $row['jeniskoleksi']; ?></td>
+                            </tr>
+                            <?php $no++;
+                            endforeach; ?>
+                        </tbody>
+                    </table>
                     </form>
-
-
                 </div>
             </div>
         </div>

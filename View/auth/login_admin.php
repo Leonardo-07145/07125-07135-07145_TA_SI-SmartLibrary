@@ -13,9 +13,7 @@
     <div class="container">
         <div class="card mt-5">
             <div class="card-header">
-                <center>
-                    <h2>Login Admin</h2>
-                </center>
+                <h2>Login Admin</h2>
             </div>
             <div class="card-body">
                 <form action="index.php?page=auth&aksi=authAdmin" method="POST">

@@ -25,7 +25,7 @@
                         Management Perpustakaan
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="index.php?page=koleksi&aksi=view">Management Data Buku</a>
+                        <a class="dropdown-item" href="index.php?page=koleksi&aksi=view">Management Data Koleksi</a>
                         <a class="dropdown-item" href="index.php?page=daftarprak&aksi=view">Management Peminjaman Buku</a>
                     </div>
                 </li>
@@ -33,7 +33,7 @@
         </div>
         <div class="form-inline">
             <!-- Diganti Saat Modul 2 -->
-            <label class="form-control mr-sm-2">Admin : {SESSION LOGIN ADMIN} </label>
+            <label class="form-control mr-sm-2">Admin : <?= $_SESSION['admin']['nama'] ?> </label>
             <a class=" btn btn-danger" href="index.php?page=auth&aksi=logout">Logout</a>
         </div>
     </nav>

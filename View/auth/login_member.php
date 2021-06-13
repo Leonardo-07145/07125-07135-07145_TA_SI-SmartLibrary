@@ -8,13 +8,12 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <title>Login Member</title>
 </head>
+
 <body>
     <div class="container">
         <div class="card mt-5">
             <div class="card-header">
-                <center>
-                    <h2>Login Member</h2>
-</center>
+                <h2>Login Member</h2>
             </div>
             <div class="card-body">
                 <form action="index.php?page=auth&aksi=authMember" method="POST">

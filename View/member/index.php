@@ -21,22 +21,23 @@
                 <div class="card-body">
                     <div class="row ml-4">
                         <div class="form-inline">
-                            <label class="form-control mr-sm-2 col-form-label"><span class="badge badge-primary">Nama</span> : Pek </label>
+                            <label class="form-control mr-sm-2 col-form-label"><span class="badge badge-primary">Nama Member</span> : <?=$data['nama']?> </label>
+                        </div>
+                    </div>
+
+                    <div class="row ml-4 mt-2">
+                        <div class="form-inline">
+                            <label class="form-control mr-sm-2 col-form-label"><span class="badge badge-primary">Tanggal Lahir</span> : <?=$data['tgllahir']?> </label>
                         </div>
                     </div>
                     <div class="row ml-4 mt-2">
                         <div class="form-inline">
-                            <label class="form-control mr-sm-2 col-form-label"><span class="badge badge-primary">Tanggal Lahir</span> : 2021-05-21 </label>
+                            <label class="form-control mr-sm-2 col-form-label"><span class="badge badge-primary">Alamat</span> : <?=$data['alamat']?> </label>
                         </div>
                     </div>
                     <div class="row ml-4 mt-2">
                         <div class="form-inline">
-                            <label class="form-control mr-sm-2 col-form-label"><span class="badge badge-primary">No.Telp</span> : 0857878382131 </label>
-                        </div>
-                    </div>
-                    <div class="row ml-4 mt-2">
-                        <div class="form-inline">
-                            <label class="form-control mr-sm-2 col-form-label"><span class="badge badge-primary">Alamat</span> : Surabaya </label>
+                            <label class="form-control mr-sm-2 col-form-label"><span class="badge badge-primary">No.Telp</span> : <?=$data['notelp']?> </label>
                         </div>
                     </div>
                 </div>

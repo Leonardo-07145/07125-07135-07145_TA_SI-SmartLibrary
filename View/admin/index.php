@@ -20,26 +20,30 @@
 
                     <table class="table table-striped table-bordered">
                         <thead>
-                        
                             <tr>
                                 <th>No.</th>
-                                <th>Nama Member</th>
-                                <th>Buku</th>
-                                <th>Alamat</th>
+                                <th>Praktikum</th>
+                                <th>Nama Praktikan</th>
+                                <th>NPM Praktikan</th>
                                 <th>No. HP</th>
+                                <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
                             <!-- Diganti saat modul 2 -->
+                            <?php $no = 1;
+                            foreach ($data as $row) : ?>
                             <tr>
-                                <td>1</td>
-                                <td>Leon</td>
-                                <td>Kisah 1001</td>
-                                <td>Moker</td>
-                                <td>087</td>
+                                <td><?= $no ?></td>
+                                <td><?= $row['namaPraktikum'] ?></td>
+                                <td><?= $row['namaPraktikan'] ?></td>
+                                <td><?= $row['npmPraktikan'] ?></td>
+                                <td><?= $row['nohpPraktikan'] ?></td>
                                 <!-- id Diganti saat modul 3 -->
-                                <!-- <td><a href="index.php?page=aslab&aksi=nilai&id=#" class="btn btn-outline-primary">Nilai</a></td> -->
+                                <td><a href="index.php?page=aslab&aksi=nilai&id=<?= $row['idPraktikan'] ?>" class="btn btn-outline-primary">Nilai</a></td>
                             </tr>
+                            <?php $no++;
+                            endforeach;?>
                         </tbody>
                     </table>
                 </div>

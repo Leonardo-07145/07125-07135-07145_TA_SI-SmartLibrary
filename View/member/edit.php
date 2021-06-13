@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Profil Member</title>
+    <title>Edi Profil</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 </head>
 
@@ -14,32 +14,32 @@
 
         <div class="card mt-5">
             <div class="card-header text-center">
-                <h2>Edit Profil Member</h2>
+                <h2>Edit Profil</h2>
                 <a href="index.php?page=member&aksi=view" class="btn btn-info float-right">Kembali</a>
             </div>
             <div class="card-body">
                 <form action="index.php?page=member&aksi=update" method="POST">
                     <!-- Diganti saat modul 3 -->
-                    <input type="hidden" name="id" value="#">
+                    <input type="hidden" name="id" value="<?= $data['id'] ?>">
                     <div class="form-group">
-                        <label for="">Nama</label>
-                        <input type="text" name="nama" class="form-control" value="John Doe">
+                        <label for="">Nama Member</label>
+                        <input type="text" name="nama" class="form-control" value="<?= $data['nama'] ?>">
                     </div>
                     <div class="form-group">
-                        <label for="">Tanggal Lahir</label>
-                        <input type="date" name="npm" class="form-control" value="06.2099.12.92929">
+                        <label for="">Password Praktikan</label>
+                        <input type="password" name="password" class="form-control" value="<?= $data['password'] ?>">
                     </div>
                     <div class="form-group">
-                        <label for="">Password</label>
-                        <input type="password" name="password" class="form-control" value="password">
+                        <label for="">Tanggal Lahir Member</label>
+                        <input type="date" name="tgllahir" class="form-control" value="<?= $data['tgllahir'] ?>">
                     </div>
                     <div class="form-group">
-                        <label for="">No.Telp</label>
-                        <input type="text" name="no_hp" class="form-control" value="087632">
+                        <label for="">Alamat Member</label>
+                        <input type="text" name="alamat" class="form-control" value="<?= $data['alamat'] ?>">
                     </div>
                     <div class="form-group">
-                        <label for="">Alamat</label>
-                        <input type="text" name="no_hp" class="form-control" value="087632">
+                        <label for="">No.Telp Praktikan</label>
+                        <input type="text" name="notelp" class="form-control" value="<?= $data['notelp'] ?>">
                     </div>
                     <button type="submit" class="btn btn-success btn-lg btn-block">Simpan</button>
                 </form>

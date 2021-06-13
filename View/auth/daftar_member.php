@@ -13,9 +13,9 @@
     <div class="container">
         <div class="card mt-5">
             <div class="card-header">
-                <center>
-                    <h2>Daftar Member</h2>
-                </center>
+            <center>
+                <h2>Daftar Member</h2>
+            </center>
             </div>
             <div class="card-body">
                 <form action="index.php?page=auth&aksi=storeMember" method="POST">
@@ -36,7 +36,7 @@
                         <input type="text" class="form-control" name="alamat">
                     </div>
                     <div class="form-group">
-                        <label>No Telepon : </label>
+                        <label>No.Telpon : </label>
                         <input type="text" class="form-control" name="notelp">
                     </div>
                     <button type="submit" class="btn btn-success btn-lg btn-block">Daftar</button>

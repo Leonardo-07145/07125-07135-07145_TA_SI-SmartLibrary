@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peminjaman Member</title>
+    <title>Praktikum Praktikan</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 </head>
 
@@ -16,24 +16,32 @@
             <div class="card mt-5">
                 <div class=" card-header">
                     <h2>Peminjaman</h2>
-                    <a href="index.php?page=member&aksi=pinjamBuku" class="btn btn-primary float-right">Pinjam Buku</a>
+                    <a href="index.php?page=member&aksi=daftarBuku" class="btn btn-primary float-right">Daftar Buku</a>
                 </div>
                 <div class="card-body">
                     <table class="table table-striped table-bordered">
                         <thead>
                             <tr>
                                 <th>No.</th>
-                                <th>Buku</th>
+                                <th>Judul</th>
                                 <th>Status</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Diganti Saat Modul 2 -->
+                            <!-- <?php $no = 1;
+                            foreach ($data as $row) : ?>
                             <tr>
-                                <td>1</td>
+                                <td><?= $no ?></td>
+                                <td><?= $row['namaPraktikum'] ?></td>
+                                <td>
+                                    <a href="index.php?page=praktikan&aksi=nilaiPraktikan&idPraktikum=<?= $row['idPraktikum'] ?>" class="btn btn-info">Cek Nilai</a>
+                                </td>
+                            </tr>
+                            <?php $no++;
+                            endforeach; ?> -->
+                            <td>1</td>
                                 <td>Kisah Tanah Jawa</td>
                                 <td><span class="badge badge-danger">Belum Diverif</span><span class="badge badge-success">Sudah Diverif</span></td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>

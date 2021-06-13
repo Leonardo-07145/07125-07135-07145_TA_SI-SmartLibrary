@@ -15,7 +15,7 @@
             <div class="card mt-5">
                 <div class=" card-header">
                     <h2>Data Koleksi</h2>
-                    <a href="index.php?page=praktikum&aksi=create" class="btn btn-success float-right">Tambah Koleksi</a>
+                    <a href="index.php?page=koleksi&aksi=create" class="btn btn-success float-right">Tambah Buku</a>
                 </div>
                 <div class="card-body">
 
@@ -31,16 +31,20 @@
                         </thead>
                         <tbody>
                             <!-- Diganti Saat Modul 2 -->
+                            <?php $no = 1;
+                            foreach ($data as $row) : ?>
                             <tr>
-                                <td>1</td>
-                                <td>Si Kancil Anak Nakal</td>
-                                <td>Ghopur</td>
-                                <td>Buku Cerita</td>
+                                <td><?= $no; ?></td>
+                                <td><?= $row['judul']; ?></td>
+                                <td><?= $row['pengarang']; ?></td>
+                                <td><?= $row['jeniskoleksi']; ?></td>
                                 <td>
-                                    <a href="index.php?page=praktikum&aksi=edit&id=#" class="btn btn-warning">Edit</a>
-                                    <a href="index.php?page=praktikum&aksi=view&id=#" class="btn btn-danger">Hapus</a>
+                                    <a href="index.php?page=koleksi&aksi=edit&id=<?= $row['id'] ?>" class="btn btn-warning">Edit</a>
+                                    <a href="index.php?page=koleksi&aksi=delete&id=<?= $row['id']; ?>" class="btn btn-danger">Hapus</a>
                                 </td>
                             </tr>
+                            <?php $no++;
+                            endforeach; ?>
                         </tbody>
                     </table>
                 </div>
