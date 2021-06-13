@@ -38,11 +38,14 @@ class MemberModel
     // }
     
     /** Function getModul berfungsi untuk mengambil data modul dari praktikum yang aktif */
-     public function getModul($idPraktikum)
+     public function getDetailPeminjaman($idPeminjaman, $idKoleksi)
     {
-        $sql = "SELECT modul.id as idModul , modul.nama as namaModul FROM modul
-        JOIN praktikum on praktikum.id = modul.praktikum_id
-        WHERE modul.praktikum_id = $idPraktikum";
+        $sql = "SELECT peminjaman.id, koleksi.id, koleksi.judul, peminjaman.status
+        FROM detailpeminjaman
+        JOIN peminjaman ON peminjaman_id = peminjaman.id
+        JOIN koleksi ON koleksi_id = koleksi.id
+        WHERE peminjaman.id = $idPeminjaman
+        AND koleksi.id = $idKoleksi";
         $query = koneksi()->query($sql);
         $hasil = [];
         while ($data = $query->fetch_assoc()){

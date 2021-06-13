@@ -75,15 +75,13 @@ class MemberController
     }
 
     /** Function nilaiPraktikum berfungsi untuk mengatur halaman nilai praktikum praktikan */
-    public function nilaiPraktikan()
-    {
-        $idPraktikan = $_SESSION['praktikan']['id'];
-        $idPraktikum = $_GET['idPraktikum'];
-        $modul = $this->model->getModul($idPraktikum);
-        $nilai = $this->model->getNilaiPraktikan($idPraktikan,$idPraktikum);
-        extract($modul);
-        extract($nilai);
-        require_once("View/praktikan/nilaiPraktikan.php");
+    public function detailPeminjaman()
+    { 
+        $idPeminjaman = $_GET['idPeminjaman'];
+        $idKoleksi = $_GET['idKoleksi'];
+        $data = $this->model->getDetailPeminjaman($idPeminjaman, $idKoleksi);
+        extract($data);
+        require_once("View/member/peminjaman.php");
     }
 }
 ?>
