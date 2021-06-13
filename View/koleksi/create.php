@@ -31,7 +31,7 @@
                             </div>
                             <div class="col">
                             <div class="col">
-                                <label for="">Jenis Koleksi (masukkan nomor nya) :</label>
+                                <label for="">Jenis Koleksi (Masukkan nomor nya) :</label>
                                 <input type="text" name="jenis_id" class="form-control" required>
                             </div>
                             </div>
@@ -47,13 +47,13 @@
                         </thead>
                         <tbody>
                             <!-- Diganti Saat Modul 2 -->
-                            <?php $no = 1;
+                            <?php 
                             foreach ($data as $row) : ?>
                             <tr>
-                                <td><?= $no; ?></td>
+                                <td><?= $row['id']; ?></td>
                                 <td><?= $row['jeniskoleksi']; ?></td>
                             </tr>
-                            <?php $no++;
+                            <?php 
                             endforeach; ?>
                         </tbody>
                     </table>
