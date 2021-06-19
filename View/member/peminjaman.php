@@ -16,7 +16,7 @@
             <div class="card mt-5">
                 <div class=" card-header">
                     <h2>Peminjaman</h2>
-                    <a href="index.php?page=member&aksi=daftarBuku" class="btn btn-primary float-right">Daftar Buku</a>
+                    <a href="index.php?page=member&aksi=daftarKoleksi" class="btn btn-primary float-right">Daftar Buku</a>
                 </div>
                 <div class="card-body">
                     <table class="table table-striped table-bordered">
@@ -24,23 +24,23 @@
                             <tr>
                                 <th>No.</th>
                                 <th>Judul</th>
+                                <th>Tanggal Pinjam</th>
+                                <th>Tanggal Kembali</th>
                                 <th>Status</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- <?php $no = 1;
+                        <?php $no = 1;
                             foreach ($data as $row) : ?>
                             <tr>
-                                <td><?= $no; ?></td>
-                                <td><?= $row['judul']; ?></td>
-                                <td><?= $row['status']; ?></td>
-                                <td>
-                                    <a href="index.php?page=praktikan&aksi=nilaiPraktikan&idPraktikum=<?= $row['idPraktikum'] ?>" class="btn btn-info">Cek Nilai</a>
-                                </td>
+                                <td><?= $no ?></td>
+                                <td><?= $row['judul'] ?></td>
+                                <td><?= $row['tglpinjam'] ?></td>
+                                <td><?= $row['tglkembali'] ?></td>
+                                <td><?= $row['status'] == 0 ? '<span class="badge badge-danger">Belum Diverifikasi</span>' : '<span class="badge badge-success">Sudah Diverifikasi</span>'; ?></td>
                             </tr>
                             <?php $no++;
                             endforeach; ?>
-                                <td><span class="badge badge-danger">Belum Diverif</span><span class="badge badge-success">Sudah Diverif</span></td>
                         </tbody>
                     </table>
                 </div>

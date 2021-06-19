@@ -8,19 +8,19 @@ class AdminController
      */
     public function __construct()
     {
-        $this->model = new AslabModel();
+        $this->model = new AdminModel();
     }
 
     /**
      * Function index berfungsi untuk mengatur tampilan awal
      */
-    // public function index()
-    // {
-    //     $idAslab = $_SESSION['admin']['id'];
-    //     $data = $this->model->get($idAdmin);
-    //     extract($data);
-    //     require_once("View/admin/index.php");
-    // }
+    public function index()
+    {
+        $id = $_SESSION['admin']['id'];
+        $data = $this->model->get($id);
+        extract($data);
+        require_once("View/admin/index.php");
+    }
 
     /**
      * Function nilai berfungsi untuk mengatur tampilan halaman data nilai praktikan

@@ -11,9 +11,9 @@ class MemberModel
     }
     
     /** Function getPraktikum berfungsi untuk mengambil seluruh data praktikum yang aktif */
-    public function getPraktikum()
+    public function getKoleksi()
     {
-        $sql = "SELECT * FROM praktikum WHERE status = 1";
+        $sql = "SELECT * FROM koleksi";
         $query = koneksi()->query($sql);
         $hasil = [];
         while ($data = $query->fetch_assoc()){
@@ -22,30 +22,13 @@ class MemberModel
         return $hasil;
     }
     
-    // /** Function getPendaftaranPraktikum berfungsi untuk mengambil data pendaftaran praktikum praktikan
-    //  * @param integer idPraktikan berisi id praktikan */
-    // public function getPeminjamanMember($idMember)
-    // {
-    //     $sql = "SELECT daftarprak.id as idDaftar , praktikum.nama as namaPraktikum , praktikum.id as idPraktikum , daftarprak.status FROM daftarprak
-    //     JOIN praktikum on praktikum.id = daftarprak.praktikum_id
-    //     WHERE daftarprak.praktikan_id = $idPraktikan";
-    //     $query = koneksi()->query($sql);
-    //     $hasil = [];
-    //     while ($data = $query->fetch_assoc()){
-    //         $hasil[] = $data;
-    //     }
-    //     return $hasil;
-    // }
-    
     /** Function getModul berfungsi untuk mengambil data modul dari praktikum yang aktif */
-     public function getDetailPeminjaman($idPeminjaman, $idKoleksi)
+     public function getPeminjaman($id)
     {
-        $sql = "SELECT peminjaman.id, koleksi.id, koleksi.judul, peminjaman.status
-        FROM detailpeminjaman
-        JOIN peminjaman ON peminjaman_id = peminjaman.id
-        JOIN koleksi ON koleksi_id = koleksi.id
-        WHERE peminjaman.id = $idPeminjaman
-        AND koleksi.id = $idKoleksi";
+        $sql = "SELECT peminjaman.id, koleksi.judul, peminjaman.tglpinjam, peminjaman.tglkembali, 
+        koleksi.id, peminjaman.status FROM peminjaman
+        JOIN koleksi on koleksi.id = peminjaman.koleksi_id
+        WHERE peminjaman.member_id = $id";
         $query = koneksi()->query($sql);
         $hasil = [];
         while ($data = $query->fetch_assoc()){
@@ -88,9 +71,10 @@ class MemberModel
     /** Function prosesStorePraktikum berfungsi untuk input data daftar praktikum ke database
      * @param integer idPraktikan berisi id praktikan
      * @param integer idPraktikum berisi id praktikum */
-    public function prosesStorePraktikum($idPraktikan, $idPraktikum)
+    public function prosesStoreKoleksi($idMember, $idKoleksi, $tglpinjam, $tglkembali)
     {
-        $sql ="INSERT INTO daftarprak(praktikan_id,praktikum_id,status) VALUES($idPraktikan, $idPraktikum, 0)";
+        $sql ="INSERT INTO peminjaman(member_id, koleksi_id, tglpinjam, tglkembali, status) 
+        VALUES($idMember, $idKoleksi, '$tglpinjam', '$tglkembali', 0)";
         $query = koneksi()->query($sql);
         return $query;
     }

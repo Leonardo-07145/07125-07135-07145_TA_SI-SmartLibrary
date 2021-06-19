@@ -22,11 +22,12 @@
                         <thead>
                             <tr>
                                 <th>No.</th>
-                                <th>Praktikum</th>
-                                <th>Nama Praktikan</th>
-                                <th>NPM Praktikan</th>
-                                <th>No. HP</th>
-                                <th>Aksi</th>
+                                <th>Nama Member</th>
+                                <th>Judul</th>
+                                <th>Pengarang</th>
+                                <th>Tanggal Pinjam</th>
+                                <th>Tanggal Kembali</th>
+                                <th>Status</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -35,12 +36,13 @@
                             foreach ($data as $row) : ?>
                             <tr>
                                 <td><?= $no ?></td>
-                                <td><?= $row['namaPraktikum'] ?></td>
-                                <td><?= $row['namaPraktikan'] ?></td>
-                                <td><?= $row['npmPraktikan'] ?></td>
-                                <td><?= $row['nohpPraktikan'] ?></td>
+                                <td><?= $row['nama']?></td>
+                                <td><?= $row['judul']?></td>
+                                <td><?= $row['pengarang']?></td>
+                                <td><?= $row['tglpinjam']?></td>
+                                <td><?= $row['tglkembali']?></td>
                                 <!-- id Diganti saat modul 3 -->
-                                <td><a href="index.php?page=aslab&aksi=nilai&id=<?= $row['idPraktikan'] ?>" class="btn btn-outline-primary">Nilai</a></td>
+                                <td><?= $row['status'] == 0 ? '<span class="badge badge-danger">Belum Diverifikasi</span>' : '<span class="badge badge-success">Sudah Diverifikasi</span>'; ?></td>
                             </tr>
                             <?php $no++;
                             endforeach;?>

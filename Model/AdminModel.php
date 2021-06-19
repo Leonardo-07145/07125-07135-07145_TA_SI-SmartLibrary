@@ -1,19 +1,18 @@
 <?php
-class AslabModel
+class AdminModel
 {
     /**
      * @param integer $idAslab berisi idAslab
      * Function get berfungsi untuk mengambil seluruh data praktikan dari database
      */
-    public function get($idAslab)
+    public function get($id)
     {
-        $sql = "SELECT praktikan.id as idPraktikan , praktikan.nama as namaPraktikan , praktikan.npm as npmPraktikan ,
-        praktikan.nomor_hp as nohpPraktikan , praktikum.nama as namaPraktikum FROM praktikan
-        JOIN daftarprak ON daftarprak.praktikan_id = praktikan.id
-        JOIN praktikum ON daftarprak.praktikum_id = praktikum.id
-        WHERE daftarprak.status = 1
-        AND daftarprak.aslab_id = $idAslab
-        AND praktikum.status = 1";
+        $sql = "SELECT peminjaman.id, member.nama, koleksi.judul, koleksi.pengarang, peminjaman.tglpinjam, 
+        peminjaman.tglkembali, peminjaman.status
+        FROM peminjaman
+        JOIN member ON peminjaman.member_id=member.id
+        JOIN koleksi ON peminjaman.koleksi_id=koleksi.id
+        WHERE peminjaman.admin_id=$id";
         $query = koneksi()->query($sql);
         $hasil = [];
         while ($data = $query->fetch_assoc()){

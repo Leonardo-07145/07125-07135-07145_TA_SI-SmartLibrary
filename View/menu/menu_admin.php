@@ -26,7 +26,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="index.php?page=koleksi&aksi=view">Management Data Koleksi</a>
-                        <a class="dropdown-item" href="index.php?page=daftarprak&aksi=view">Management Peminjaman Buku</a>
+                        <a class="dropdown-item" href="index.php?page=daftarpinjam&aksi=view">Management Peminjaman Buku</a>
                     </div>
                 </li>
             </ul>

@@ -55,31 +55,32 @@ class MemberController
     // }
 
     /** Function daftarPraktikum berfungsi untuk mengatur tampilan halaman daftar praktikum */
-    public function daftarBuku()
+    public function daftarKoleksi()
     {
-        $data = $this->model->getBuku();
+        $data = $this->model->getKoleksi();
         extract($data);
-        require_once("View/member/daftarPraktikum.php"); 
+        require_once("View/member/daftarKoleksi.php"); 
     }
 
     /** Function storePraktikum berfungsi untuk memproses data praktikum yang dipilih untuk ditambahkan */
-    public function storePraktikum()
+    public function storeKoleksi()
     {
-        $praktikum = $_POST['praktikum'];
-        $idPraktikan = $_SESSION['praktikan']['id'];
-        if($this->model->prosesStorePraktikum($idPraktikan, $praktikum)){
-            header("location: index.php?page=praktikan&aksi=praktikum&pesan=Berhasil Daftar Praktikum");
+        $idKoleksi = $_POST['koleksi'];
+        $tglpinjam = $_POST['tglpinjam'];
+        $tglkembali = $_POST['tglkembali'];
+        $idMember = $_SESSION['member']['id'];
+        if($this->model->prosesStoreKoleksi($idMember, $idKoleksi, $tglpinjam, $tglkembali)){
+            header("location: index.php?page=member&aksi=peminjaman&pesan=Berhasil Daftar");
         }else{
-            header("location: index.php?page=praktikan&aksi=daftarPraktikum&pesan=Gagal Daftar Praktikum");
+            header("location: index.php?page=member&aksi=daftarKoleksi&pesan=Gagal Daftar");
         }
     }
 
     /** Function nilaiPraktikum berfungsi untuk mengatur halaman nilai praktikum praktikan */
-    public function detailPeminjaman()
+    public function peminjaman()
     { 
-        $idPeminjaman = $_GET['idPeminjaman'];
-        $idKoleksi = $_GET['idKoleksi'];
-        $data = $this->model->getDetailPeminjaman($idPeminjaman, $idKoleksi);
+        $id = $_SESSION['member']['id'];
+        $data = $this->model->getPeminjaman($id);
         extract($data);
         require_once("View/member/peminjaman.php");
     }

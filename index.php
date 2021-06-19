@@ -8,11 +8,11 @@ require_once("Model/KoleksiModel.php");
 require_once("Model/AdminModel.php");
 require_once("Model/JenisModel.php");
 require_once("Model/MemberModel.php");
-require_once("Model/DaftarPrakModel.php");
+require_once("Model/DaftarPinjamModel.php");
 /**Memanggil Controller */
 require_once("Controller/AdminController.php");
 require_once("Controller/AuthController.php");
-require_once("Controller/DaftarprakController.php");
+require_once("Controller/DaftarPinjamController.php");
 require_once("Controller/JenisController.php");
 require_once("Controller/MemberController.php");
 require_once("Controller/KoleksiController.php");
@@ -54,8 +54,7 @@ if (isset($_GET['page']) && isset($_GET['aksi']))
         {
             $admin = new AdminController();    
             if ($aksi == 'view') {
-                require_once("View/admin/index.php");
-                // $admin->index();
+                $admin->index();
             } else if ($aksi == 'nilai') {
                 $admin->Nilai();
             } else if ($aksi == 'createNilai') {
@@ -144,12 +143,11 @@ if (isset($_GET['page']) && isset($_GET['aksi']))
             } else if ($aksi == 'update') {
                 $member->update();
             } else if ($aksi == 'peminjaman') {
-                //$member->peminjaman();
-                require_once("View/member/peminjaman.php");
-            } else if ($aksi == 'daftarBuku') {
-                $member->daftarBuku();
-            } else if ($aksi == 'storePraktikum') {
-                $member->storePraktikum();
+                $member->peminjaman();
+            } else if ($aksi == 'daftarKoleksi') {
+                $member->daftarKoleksi();
+            } else if ($aksi == 'storeKoleksi') {
+                $member->storeKoleksi();
             } else if ($aksi == 'nilaiPraktikan') {
                 $member->nilaiPraktikan();
             } else {
@@ -158,17 +156,17 @@ if (isset($_GET['page']) && isset($_GET['aksi']))
         } else {
             header("location: index.php?page=auth&aksi=loginPraktikan");
         }
-    } else if ($page == 'daftarprak') {
-        require_once("View/menu/menu_aslab.php");
-        if($_SESSION['role'] == 'aslab')
+    } else if ($page == 'daftarpinjam') {
+        require_once("View/menu/menu_admin.php");
+        if($_SESSION['role'] == 'admin')
         {
-            $daftarprak = new DaftarprakController();    
+            $daftarpinjam = new DaftarPinjamController();    
             if ($aksi == 'view') {
-                $daftarprak->index();
+                $daftarpinjam->index();
             } else if ($aksi == 'verif') {
-                $daftarprak->verif();
+                $daftarpinjam->verif();
             } else if ($aksi == 'unVerif') {
-                $daftarprak->unVerif();
+                $daftarpinjam->unVerif();
             } else {
                 echo "Method Not Found";
             }

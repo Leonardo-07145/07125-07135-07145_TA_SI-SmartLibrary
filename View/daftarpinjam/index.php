@@ -20,8 +20,11 @@
                         <thead>
                             <tr>
                                 <th>No.</th>
-                                <th>Nama Praktikan</th>
-                                <th>Praktikum</th>
+                                <th>Nama Member</th>
+                                <th>Judul</th>
+                                <th>Pengarang</th>
+                                <th>Tanggal Pinjam</th>
+                                <th>Tanggal Kembali</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -31,14 +34,17 @@
                             foreach($data as $row) : ?>
                             <tr>
                                 <td><?= $no ?></td>
-                                <td><?= $row['namaPraktikan']?></td>
-                                <td><?= $row['namaPraktikum']?></td>
+                                <td><?= $row['nama']?></td>
+                                <td><?= $row['judul']?></td>
+                                <td><?= $row['pengarang']?></td>
+                                <td><?= $row['tglpinjam']?></td>
+                                <td><?= $row['tglkembali']?></td>
                                 <td>
                                     <!-- # nanti di ganti saat modul 3 -->
                                     <?php if ($row['status'] == '0') : ?>
-                                            <a href="index.php?page=daftarprak&aksi=verif&id=<?= $row['idDaftar']; ?>" class="btn btn-success">Verif</a>
+                                            <a href="index.php?page=daftarpinjam&aksi=verif&id=<?= $row['id']; ?>" class="btn btn-success">Verif</a>
                                         <?php else : ?>
-                                            <a href="index.php?page=daftarprak&aksi=unVerif&id=<?= $row['idDaftar']; ?>&idPraktikan=<?= $row['idPraktikan']; ?>" class="btn btn-danger">Un-Verif</a>
+                                            <a href="index.php?page=daftarpinjam&aksi=unVerif&id=<?= $row['id']; ?>" class="btn btn-danger">Un-Verif</a>
                                         <?php endif; ?>
                                 </td>
                             </tr>
