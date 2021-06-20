@@ -12,7 +12,6 @@
 <body>
     <center>
         <div class="container">
-            <!-- Diganti Saat Modul 2 -->
             <div class="card mt-5" style="width : 50%;">
                 <div class=" card-header">
                     <h2>Profil</h2>

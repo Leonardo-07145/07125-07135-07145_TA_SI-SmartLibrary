@@ -17,19 +17,19 @@ class AuthController
         require_once("View/auth/index.php");
     }
 
-    /** Function login_aslab berfungsi untuk mengatur halaman login untuk aslab */
+    /** Function login_admin berfungsi untuk mengatur halaman login untuk admin */
     public function login_admin()
     {
         require_once("View/auth/login_admin.php");
     }
 
-    /** Function login_praktikan berfungsi untuk mengatur halaman login untuk praktikan */
+    /** Function login_member berfungsi untuk mengatur halaman login untuk member */
     public function login_member()
     {
         require_once("View/auth/login_member.php");
     }
 
-    /** Function authAslab berfungsi untuk authentication aslab */
+    /** Function authAdmin berfungsi untuk authentication admin */
     public function authAdmin()
     {
         $nama = $_POST['nama'];
@@ -41,11 +41,11 @@ class AuthController
 
             header("location: index.php?page=admin&aksi=view&pesan=Berhasil Login");
         } else {
-            header("location: index.php?page=auth&aksi=loginAdmin&pesan=Nama atau Passwors salah");
+            header("location: index.php?page=auth&aksi=loginAdmin&pesan=Nama atau Password salah");
         }
     }
 
-    /** Function authPraktikan berfungsi untuk authentication praktikan */
+    /** Function authMember berfungsi untuk authentication member */
     public function authMember()
     {
         $nama = $_POST['nama'];
@@ -61,7 +61,7 @@ class AuthController
         }
     }
 
-    /** Function daftarPraktikan berfungsi untuk mengatur tampilan daftar */
+    /** Function daftarMember berfungsi untuk mengatur tampilan daftar member */
     public function daftarMember()
     {
         require_once("View/auth/daftar_member.php");
@@ -69,7 +69,7 @@ class AuthController
 
     /**
      * Function ini berfungsi untuk memproses data untuk ditambahkan
-     * Fungsi ini membutuhkan data nama, npm, password, notelp dengan metode http request post
+     * Fungsi ini membutuhkan data nama, password, tgllahir, alamat, notelp dengan metode http request post
      */
     public function storeMember()
     {

@@ -4,14 +4,14 @@ class MemberController
     private $model;
 
     /**
-     * Function ini adalah constructor yang berguna menginisialisasi Obyek PraktikanModel
+     * Function ini adalah constructor yang berguna menginisialisasi Obyek MemberModel
      */
     public function __construct()
     {
         $this->model = new MemberModel();
     }
 
-    /** Function index berfungsi untuk mengatur tampilan awal halaman praktikan */
+    /** Function index berfungsi untuk mengatur tampilan awal halaman member */
     public function index()
     {
         $id = $_SESSION['member']['id'];
@@ -45,16 +45,7 @@ class MemberController
         }
     }
 
-    // /** Function praktikum berfungsi untuk mengatur ke tampilan halaman praktikum praktikan */
-    // public function peminjaman()
-    // {
-    //     $idPraktikan = $_SESSION['member']['id'];
-    //     $data = $this->model->getPeminjamanMember($idMember);
-    //     extract($data);
-    //     require_once("View/member/praktikum.php");
-    // }
-
-    /** Function daftarPraktikum berfungsi untuk mengatur tampilan halaman daftar praktikum */
+    /** Function daftarKoleksi berfungsi untuk mengatur tampilan halaman daftar pinjam */
     public function daftarKoleksi()
     {
         $data = $this->model->getKoleksi();
@@ -62,7 +53,7 @@ class MemberController
         require_once("View/member/daftarKoleksi.php"); 
     }
 
-    /** Function storePraktikum berfungsi untuk memproses data praktikum yang dipilih untuk ditambahkan */
+    /** Function storeKoleksi berfungsi untuk memproses data peminjaman yang dipilih untuk ditambahkan */
     public function storeKoleksi()
     {
         $idKoleksi = $_POST['koleksi'];
@@ -76,7 +67,7 @@ class MemberController
         }
     }
 
-    /** Function nilaiPraktikum berfungsi untuk mengatur halaman nilai praktikum praktikan */
+    /** Function peminjaman berfungsi untuk menampilkan data peminjaman yang dipilih */
     public function peminjaman()
     { 
         $id = $_SESSION['member']['id'];

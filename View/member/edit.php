@@ -19,14 +19,13 @@
             </div>
             <div class="card-body">
                 <form action="index.php?page=member&aksi=update" method="POST">
-                    <!-- Diganti saat modul 3 -->
                     <input type="hidden" name="id" value="<?= $data['id'] ?>">
                     <div class="form-group">
                         <label for="">Nama Member</label>
                         <input type="text" name="nama" class="form-control" value="<?= $data['nama'] ?>">
                     </div>
                     <div class="form-group">
-                        <label for="">Password Praktikan</label>
+                        <label for="">Password Member</label>
                         <input type="password" name="password" class="form-control" value="<?= $data['password'] ?>">
                     </div>
                     <div class="form-group">
@@ -38,7 +37,7 @@
                         <input type="text" name="alamat" class="form-control" value="<?= $data['alamat'] ?>">
                     </div>
                     <div class="form-group">
-                        <label for="">No.Telp Praktikan</label>
+                        <label for="">No.Telp Member</label>
                         <input type="text" name="notelp" class="form-control" value="<?= $data['notelp'] ?>">
                     </div>
                     <button type="submit" class="btn btn-success btn-lg btn-block">Simpan</button>

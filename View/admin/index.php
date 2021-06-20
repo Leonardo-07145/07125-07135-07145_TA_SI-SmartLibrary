@@ -31,7 +31,6 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Diganti saat modul 2 -->
                             <?php $no = 1;
                             foreach ($data as $row) : ?>
                             <tr>
@@ -41,7 +40,6 @@
                                 <td><?= $row['pengarang']?></td>
                                 <td><?= $row['tglpinjam']?></td>
                                 <td><?= $row['tglkembali']?></td>
-                                <!-- id Diganti saat modul 3 -->
                                 <td><?= $row['status'] == 0 ? '<span class="badge badge-danger">Belum Diverifikasi</span>' : '<span class="badge badge-success">Sudah Diverifikasi</span>'; ?></td>
                             </tr>
                             <?php $no++;

@@ -4,7 +4,7 @@ class KoleksiController
     private $model;
 
     /**
-     * Function ini adalah constructor yang berguna menginisialisasi Obyek PraktikumModel
+     * Function ini adalah constructor yang berguna menginisialisasi Obyek KoleksiModel
      */
     public function __construct()
     {
@@ -33,7 +33,7 @@ class KoleksiController
 
     /**
      * Function store berfungsi untuk memproses data untuk di tambahkan
-     * Fungsi ini membutuhkan data nama,tahun dengan metode http request POST
+     * Fungsi ini membutuhkan data judul, pengarang, jenis_id dengan metode http request POST
      */
     public function store()
     {
@@ -76,7 +76,7 @@ class KoleksiController
         }
     }
 
-    /** Function delete berfungsi untuk menghapus modul */
+    /** Function delete berfungsi untuk menghapus koleksi */
     public function delete()
     {
         $id = $_GET['id'];
@@ -86,36 +86,5 @@ class KoleksiController
             header("location: index.php?page=koleksi&aksi=view&pesan=Gagal Delete Data"); // Jangan ada spasi habis location  
         } 
     }
-
-    /**
-     * Function ini berfungsi untuk memproses update salah satu field data
-     * Function ini membutuhkan data id dengan metode http request GET
-     */
-    public function aktifkan()
-    {
-        $id = $_GET['id'];
-        if ($this->model->prosesAktifkan($id)){
-            header("location: index.php?page=praktikum&aksi=view&pesan=Berhasil Men-Aktifkan Data"); // Jangan ada spasi habis location
-        } else {
-            header("location: index.php?page=praktikum&aksi=view&pesan=Gagal Men-Aktifkan Data"); // Jangan ada spasi habis location
-        }
-    }
-
-    /**
-     * Function ini berfungsi untuk memproses update salah satu field data
-     * Function ini membutuhkan data id dengan metode http request GET
-     */
-    public function nonAktifkan()
-    {
-        $id = $_GET['id'];
-        if ($this->model->prosesNonAktifkan($id)){
-            header("location: index.php?page=praktikum&aksi=view&pesan=Berhasil non-Aktifkan Data"); // Jangan ada spasi habis location
-        } else {
-            header("location: index.php?page=praktikum&aksi=view&pesan=Gagal non-Aktifkan Data"); // Jangan ada spasi habis location
-        }
-    }
 }
-// $tes = new KoleksiController();
-// var_export($tes->daftarJenisKoleksi());
-// die();
 ?>

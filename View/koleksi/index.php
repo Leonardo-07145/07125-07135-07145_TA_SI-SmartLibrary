@@ -30,7 +30,6 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Diganti Saat Modul 2 -->
                             <?php $no = 1;
                             foreach ($data as $row) : ?>
                             <tr>

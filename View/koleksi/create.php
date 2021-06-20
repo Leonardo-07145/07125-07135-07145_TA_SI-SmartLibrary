@@ -46,7 +46,6 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Diganti Saat Modul 2 -->
                             <?php 
                             foreach ($data as $row) : ?>
                             <tr>

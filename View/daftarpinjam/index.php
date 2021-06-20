@@ -29,7 +29,6 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Diganti Saat Modul 2 -->
                             <?php $no = 1;
                             foreach($data as $row) : ?>
                             <tr>
@@ -40,7 +39,6 @@
                                 <td><?= $row['tglpinjam']?></td>
                                 <td><?= $row['tglkembali']?></td>
                                 <td>
-                                    <!-- # nanti di ganti saat modul 3 -->
                                     <?php if ($row['status'] == '0') : ?>
                                             <a href="index.php?page=daftarpinjam&aksi=verif&id=<?= $row['id']; ?>" class="btn btn-success">Verif</a>
                                         <?php else : ?>

@@ -4,7 +4,7 @@ class DaftarPinjamController
     private $model;
 
     /**
-     * Function ini adalah constructor yang berguna menginisialisasi Obyek DaftarprakModel
+     * Function ini adalah constructor yang berguna menginisialisasi Obyek DaftarPinjamModel
      */
     public function __construct()
     {
@@ -19,7 +19,7 @@ class DaftarPinjamController
         require_once("View/daftarpinjam/index.php");
     }
 
-    /** Function verif berfungsi memverifikasi yang sudah mendaftar praktikum */
+    /** Function verif berfungsi memverifikasi yang sudah meminjam koleksi */
     public function verif()
     {
         $id = $_GET['id'];
@@ -35,7 +35,7 @@ class DaftarPinjamController
     {
         $id = $_GET['id'];
         $idMember = $_GET['member_id'];
-        if($this->model->prosesunVerif($id, $idMember)){
+        if($this->model->prosesunVerif($id)){
             header("location: index.php?page=daftarpinjam&aksi=view&pesan=Berhasil Un-Verif");
         }else{
             header("location: index.php?page=daftarpinjam&aksi=view&pesan=Gagal Un-Verif");

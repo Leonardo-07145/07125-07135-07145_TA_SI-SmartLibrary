@@ -33,9 +33,10 @@ class KoleksiModel
     }
 
     /**
-     * Function prosesStore berfungsi untuk input data praktikum
-     * @param String $nama berisi nama praktikum
-     * @param String $tahun berisi nama praktikum
+     * Function prosesStore berfungsi untuk input data koleksi
+     * @param String $judul berisi nama judul
+     * @param String $pengarang berisi nama pengarang
+     * @param String $jenis_id berisi nama jenis_id
      */
     public function prosesStore($judul, $pengarang, $jenis_id)
     {
@@ -45,8 +46,8 @@ class KoleksiModel
 
     /**
      * Function update berfungsi untuk mengubah data di database
-     * @param String $nama berisi data nama
-     * @param String $tahun berisi data tahun
+     * @param String $judul berisi data judul
+     * @param String $pengarang berisi data pengarang
      * @param Integer $id berisi id dari suatu data di database
      */
     public function storeUpdate($judul, $pengarang, $id)
@@ -60,28 +61,6 @@ class KoleksiModel
     public function prosesDelete($id)
     {
         $sql = "DELETE FROM koleksi WHERE id=$id";
-        return koneksi()->query($sql);
-    }
-
-    /**
-     * Function aktifkan ini untuk merubah salah satu field di database
-     * @param Integer $id berisi id dari suatu data di database
-     */
-    public function prosesAktifkan($id)
-    {
-        koneksi()->query(("UPDATE praktikum SET status=0")); // Merubah status praktikum yang aktif menjadi tidak aktif
-
-        $sql = "UPDATE praktikum SET status=1 WHERE id=$id";
-        return koneksi()->query($sql);
-    }
-
-    /**
-     * Function nonAktifkan ini untuk merubah salah satu field di database
-     * @param Integer $id berisi id dari suatu data di database
-     */
-    public function prosesNonAktifkan($id)
-    {
-        $sql = "UPDATE praktikum SET status=0 WHERE id=$id";
         return koneksi()->query($sql);
     }
 
@@ -100,6 +79,3 @@ class KoleksiModel
         return $query->fetch_assoc();
     }    
 }
-// $tes = new KoleksiModel();
-// var_export($tes->getJenis());
-// die();

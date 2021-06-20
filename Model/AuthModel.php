@@ -1,6 +1,11 @@
 <?php
 class AuthModel
 {
+    /**
+     * Function untuk cek dari database berdasarkan
+     * @param String $nama berisi nama
+     * @param String $password berisi password
+     */
     public function prosesAuthAdmin($nama, $password)
     {
         $sql = "select * from admin where nama='$nama' and password='$password'";
@@ -10,7 +15,7 @@ class AuthModel
 
     /**
      * Function untuk cek dari database berdasarkan
-     * @param String $npm berisi npm
+     * @param String $nama berisi nama
      * @param String $password berisi password
      */
     public function prosesAuthMember($nama, $password)
@@ -21,11 +26,12 @@ class AuthModel
     }
 
     /**
-     * Function store berfungsi untuk menambah data ke database
+     * Function store berfungsi untuk menambah data member ke database
      * @param String nama berisi data nama
-     * @param String npm berisi data npm
-     * @param String no_hp berisi data nomor  hp
      * @param String password berisi data password
+     * @param String tgllahir berisi data tgllahir
+     * @param String alamat berisi data alamat
+     * @param String notelp berisi data notelp
      */
     public function prosesStoreMember($nama, $password, $tgllahir, $alamat, $notelp)
     {
@@ -33,6 +39,3 @@ class AuthModel
         return koneksi()->query($sql);
     }
 }
-// $tes = new AuthModel();
-// var_export($tes->prosesStorePraktikan('tesNama','tesNpm','123','password'));
-// die();

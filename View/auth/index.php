@@ -8,17 +8,15 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <title>Login</title>
 </head>
-
 <body>
     <center>
         <div class="container">
             <div class="card mt-5">
                 <div class="card-header">
-
-                    <h2>Selamat Datang Di Sistem Informasi Smart Library</h2>
-                    <p>
+                    <h1> Selamat Datang Di Sistem Informasi Smart Library</h1>
+                    <a>
                         <img src="gambarbuku.jpg" />
-                    </p>
+                    </a>
                 </div>
                 <div class="card-body">
                     <a href="index.php?page=auth&aksi=loginAdmin" class="btn btn-dark">Login Admin</a>
@@ -28,10 +26,10 @@
             </div>
         </div>
     </center>
-
     <script src="assets/js/jquery-3.3.1.slim.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>

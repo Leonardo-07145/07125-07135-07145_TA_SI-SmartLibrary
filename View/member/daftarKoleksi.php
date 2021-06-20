@@ -21,7 +21,6 @@
                 <form action="index.php?page=member&aksi=storeKoleksi" method="POST">
                     <div class="row">
                         <div class="col">
-                            <!-- Digant saat modul 3 -->
                             <label for="">Daftar Koleksi : </label>
                             <select name="koleksi" class="form-control">
                             <?php foreach ($data as $row) : ?>
